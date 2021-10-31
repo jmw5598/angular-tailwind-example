@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+import { DialogService } from './modules/shared/dialog';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-tailwind-example';
+  constructor(
+    private _dialogService: DialogService
+  ) { }
+
+  public open(): void {
+    this._dialogService.open(ConfirmationDialogComponent, null);
+  }
 }
