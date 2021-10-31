@@ -21,7 +21,7 @@
       <nav class="hidden md:flex justify-start space-x-10">
         <div class="relative" *ngFor="let link of links">
           <!-- @TODO - Fix this, do not use ngif on dropdown, add classes per tailwind docs -->
-          <button (click)="expandLink(link)" type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black-500" aria-expanded="false">
+          <button (click)="expandLink($event, link)" type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black-500" aria-expanded="false">
             <span>{{ link.label }}</span>
             <ng-icon 
                 name="hero-chevron-down" 
