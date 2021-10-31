@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { DialogModule } from './modules/shared/dialog/dialog.module';
+import { FramingModule } from './modules/shared/framing/framing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DialogModule } from './modules/shared/dialog/dialog.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DialogModule
+    DialogModule,
+    FramingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
